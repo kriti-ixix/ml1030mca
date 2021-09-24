@@ -1,25 +1,36 @@
 class Student:
-    name = ""
-    rollno = 0
-    # subject = "Python"
-    marks = 0
+    # name = ''
+    # rollno = 0
 
-    def __init__(self, n, r, m, s="Python"):
+    def __init__(self, n, r):
         self.name = n
         self.rollno = r
-        self.marks = m
+
+    # def getPercentage(self):
+    #     return (self.marks * 100) / 50
+
+    # def __str__(self):
+    #     return self.name + " got " + str(self.getPercentage()) + f"% in " + self.subject
+
+
+class Exam(Student):
+    def __init__(self, n, r, s, m):
+        Student.__init__(self, n, r)
         self.subject = s
+        self.marks = m
 
-s1 = Student("Kriti", 20, 30, "C++")
-# s1.name = "Kriti"
+
+s1 = Student("ABC", 4, 25)
+# s1.name = 'Student1'
 # s1.rollno = 20
-# s1.marks = 30
+# s1.marks = 35
+# print(s1.getPercentage())
+print(s1)
 
-print(s1.name, s1.rollno, s1.subject, s1.marks)
+s2 = Student("XYZ", 5, 40, "JAVA")
+# print(s2.getPercentage())
+print(s2)
 
-s2 = Student("Ritvik", 15, 0)
-# s2.name = "Ritvik"
-# s2.rollno = 15
-# s2.marks = 0
-
-print(s2.name, s2.rollno, s2.subject, s2.marks)
+# s3 = Student()
+# print(s3.getPercentage())
+# print(s3)
